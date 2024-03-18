@@ -1,5 +1,5 @@
 body {
-  font-family: 'Lato', sans-serif !important;
+  font-family: "Lato", sans-serif;
   font-size: 14px;
   letter-spacing: 0.06em;
   line-height: 20px;
@@ -45,9 +45,8 @@ h6,
 
 .content-wrap {
   max-width: none;
-  padding: 0.1px;
   margin: 0 auto;
-  overflow: hidden;
+  /* overflow: hidden; */
   background: #0a0a0a;
 }
 
@@ -151,13 +150,49 @@ h6,
 }
 
 /* FOOTER */
-footer .copyright {
-  position: relative;
-  padding: 30px 10px;
+footer {
   text-align: center;
-  background: #0a0a0a;
-  background: rgba(10, 10, 10, 0.7);
+  padding-bottom: 2rem;
 }
+
+.footer-links {
+  padding: 2rem 0;
+}
+
+/* POLICY and T&C Page Styles */
+#page-main,
+#page-header {
+  color: white;
+}
+#page-header h1 {
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+#page-main p,
+#page-main ol {
+  margin-bottom: .5rem;
+}
+#page-main ol,
+#page-main ul {
+  padding-left: 2rem;
+}
+#page-main p,
+#page-main li {
+  font-size: 1.2rem;
+  line-height: 1.2;
+}
+#page-main h3 {
+  margin-bottom: 0.5rem;
+}
+#page-main h1 {
+  font-size: calc(1.375rem + 1.5vw);
+}
+#page-main h3 {
+  font-size: calc(1rem + 1vw);
+  line-height: 1.2;
+}
+/* POLICY and T&C Page Styles End */
 
 /* MEDIA QUERIES */
 
@@ -192,5 +227,8 @@ footer .copyright {
 @media (min-width: 1200px) {
   .container {
     width: 1170px;
+  }
+  h1 {
+    font-size: 2.5rem;
   }
 }
