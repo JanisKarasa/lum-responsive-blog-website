@@ -148,6 +148,18 @@ h6,
   margin-left: 10px;
   width: fit-content;
   border: 1px solid white;
+  transition: 0.3s background-color ease;
+}
+a {
+  transition: 0.3s color ease;
+}
+.btn:hover {
+  background-color: #c9562a;
+  border: 1px solid #c9562a;
+  color: white;
+}
+a:hover {
+  color: #c9562a;
 }
 
 /* FOOTER */
@@ -172,7 +184,7 @@ footer {
 
 #page-main p,
 #page-main ol {
-  margin-bottom: .5rem;
+  margin-bottom: 0.5rem;
 }
 #page-main ol,
 #page-main ul {
@@ -234,7 +246,6 @@ footer {
   }
 }
 
-
 /* ARTICLE PAGES */
 /* HERO Section */
 .hero-banner.xsmall {
@@ -264,5 +275,5 @@ footer {
 }
 
 .publishing-info .item:nth-child(3) > svg {
-  width: 1.125em
+  width: 1.125em;
 }
