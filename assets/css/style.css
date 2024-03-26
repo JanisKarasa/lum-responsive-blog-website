@@ -1,5 +1,5 @@
 body {
-  font-family: "Lato", sans-serif;
+  font-family: "Josefin Sans", sans-serif;
   font-weight: 300;
   font-size: 14px;
   letter-spacing: 0.06em;
@@ -35,6 +35,10 @@ h6,
 .h6 {
   font-size: 12px;
   line-height: 13px;
+}
+
+p {
+  font-family: "Lato", sans-serif;
 }
 
 .container {
@@ -95,10 +99,17 @@ h6,
 }
 
 /* BLOG CONTENT */
+/* Main Content */
+.blog-content {
+  display: flex;
+}
 .blog-content-item {
   display: flex;
   gap: 2rem;
   margin-top: 3rem;
+}
+.blog-content-item:first-child {
+  margin-top: 0;
 }
 
 .flex-1 {
@@ -107,10 +118,16 @@ h6,
 .flex-2 {
   flex: 2;
 }
+.flex-3 {
+  flex: 3;
+}
+.flex-4 {
+  flex: 4;
+}
 
 .blog-content {
-  margin-top: 3rem;
-  margin-bottom: 3rem;
+  margin-top: 3.5rem;
+  margin-bottom: 3.5rem;
 }
 
 .blog-item-right {
@@ -119,9 +136,12 @@ h6,
 }
 
 .blog-item-date {
+  display: block;
   margin-top: 8px;
   font-size: 0.7rem;
   color: rgba(255, 255, 255, 0.5);
+}
+.float-right {
   float: right !important;
 }
 
@@ -160,6 +180,51 @@ a {
 }
 a:hover {
   color: #c9562a;
+}
+
+/* Side Content */
+.side-content {
+  padding-left: 2rem;
+}
+
+.side-block {
+  margin-bottom: 3rem;
+}
+
+.side-block .block-title {
+  padding: 0.5rem 1.1rem;
+  margin: 0;
+  margin-bottom: 1rem;
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.side-block .block-content {
+  margin-top: 1rem;
+}
+
+.side-news {
+  padding: 0.5rem 0;
+  text-align: left;
+  display: flex;
+  gap: 1rem;
+}
+
+.side-news img {
+  height: auto;
+}
+
+.side-news h4 {
+  margin: 0;
+  margin-top: 5px;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+/* getting 3 dots when the width is limited */
+.ellipsis {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 /* FOOTER */
@@ -228,12 +293,19 @@ footer {
 }
 
 @media (max-width: 992px) {
+  .blog-content {
+    flex-direction: column;
+  }
   .blog-content-item {
     flex-direction: column;
     margin-top: 6rem;
   }
   .blog-content-item img {
     width: 100%;
+  }
+  .side-content {
+    padding-left: 0;
+    margin-top: 6rem;
   }
 }
 
@@ -276,4 +348,28 @@ footer {
 
 .publishing-info .item:nth-child(3) > svg {
   width: 1.125em;
+}
+
+/* Columns */
+
+.col-xs-3 {
+  width: 25%;
+}
+.col-xs-9 {
+  width: 75%;
+}
+
+@media (min-width: 992px) {
+  .col-md-3 {
+    width: 25%;
+  }
+  .col-md-4 {
+    width: 33.33333333%;
+  }
+  .col-md-8 {
+    width: 66.66666667%;
+  }
+  .col-md-9 {
+    width: 75%;
+  }
 }
