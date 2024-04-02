@@ -337,10 +337,10 @@ footer {
 /* HERO Section */
 .hero-banner.xsmall {
   min-height: 350px;
-  opacity: .5;
+  opacity: 0.5;
 }
 .hero-banner img {
-  opacity: .7;
+  opacity: 0.7;
 }
 
 .article p {
