@@ -9,7 +9,7 @@ body {
 h1,
 .h1 {
   font-size: 50px;
-  line-height: 55px;
+  line-height: 35px;
 }
 h2,
 .h2 {
@@ -58,12 +58,12 @@ p {
 /* BLOG HERO */
 
 .hero-banner {
-  min-height: 450px;
+  /* min-height: 450px; */
   width: 100%;
   position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  /* display: flex; */
+  /* align-items: center; */
+  /* justify-content: center; */
   overflow: hidden;
 }
 
@@ -83,18 +83,55 @@ p {
   background-size: cover;
 }
 
+/* HERO BANNER COLLAGE */
+.collage {
+  display: flex;
+  flex-wrap: wrap;
+  /* Adjust max-width as needed */
+  width: 100%;
+  margin: 0 auto;
+  /* padding: 20px; */
+  box-sizing: border-box;
+  opacity: 0.8;
+}
+.collage img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  background-size: cover;
+  width: calc(20% - 0px); /* 20% width for each image with some spacing */
+  /* Adjust margin as needed for spacing between images */
+  /* margin: 5px;  */
+  /* Optional: Add border for each image */
+  /* border: 1px solid #ddd;  */
+  box-sizing: border-box;
+}
+/* For smaller screens, make images full width with spacing */
+/* @media (max-width: 600px) {
+  .collage img {
+    width: calc(
+      50% - 10px
+    ); 
+  }
+} */
+/* HERO BANNER COLLAGE End */
+
 .hero-banner .info {
-  position: relative;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   width: 100%;
   padding: 80px 0;
 }
 
+main h1,
 .hero-banner .info h1,
 .hero-banner .info h2,
 .hero-banner .info .h1,
 .hero-banner .info .h2 {
-  font-size: 50px;
-  line-height: 55px;
+  font-size: clamp(20px, 5vw, 50px); /* Adjust the range as needed */
+  line-height: clamp(30px, 5vw, 55px); /* Adjust the range as needed */
   text-transform: uppercase;
 }
 
@@ -298,6 +335,7 @@ footer {
 @media (max-width: 768px) {
   .hero-banner .info {
     text-align: center;
+    font-weight: 600;
   }
 }
 
@@ -337,7 +375,7 @@ footer {
 /* HERO Section */
 .hero-banner.xsmall {
   min-height: 350px;
-  opacity: 0.5;
+  /* opacity: 0.5; */
 }
 .hero-banner img {
   opacity: 0.7;
